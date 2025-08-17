@@ -126,12 +126,12 @@ body{
     width: 90%;
     max-width: 320px;
     height: 450px;
-    top: 0px;              /* pull even closer to top */
+    top: -40px;              /* pull even closer to top */
   }
   .container {
     width: 90%;
     height: 240px;
-    top: -60px;             /* push envelope up even more */
+    top: -80px;             /* push envelope up even more */
   }
 }
 
