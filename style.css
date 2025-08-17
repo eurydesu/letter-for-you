@@ -86,7 +86,7 @@ body{
 /* Flipbook centered at top */
 .flipbook {
     position: fixed;
-    top: -100px;              /* stick near top of screen */
+    top: 40px;              /* stick near top of screen */
     left: 50%;
     transform: translateX(-50%);
     width: 300px;           /* match envelope width */
