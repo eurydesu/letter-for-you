@@ -1,36 +1,29 @@
-body {
+body{
     display: grid;
     place-items: center;
     min-height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
+    overflow: hidden;
     background: #d0b2e5;
-    margin: 0;
-    padding: 0;
 }
-
-.container {
+.container{
     position: relative;
-    top: -40px; /* lifts envelope/card higher on desktop */
+    top: -40px;
 }
-
-.valentines {
+.valentines{
     position: relative;
     top: 30px;
     cursor: pointer;
     animation: up 3s linear infinite;
 }
-
-.envelope {
+.envelope{
     position: relative;
     width: 300px;
     height: 200px;
     background: #f08080;
     display: grid;
     place-items: center;
-    margin: 0 auto;
 }
-.envelope::before {
+.envelope::before{
     content: '';
     position: absolute;
     width: 212px;
@@ -41,8 +34,7 @@ body {
     left: 44px;
     border-radius: 30px 0 0 0;
 }
-
-.front {
+.front{
     position: absolute;
     border-right: 180px solid #f4978e;
     border-top: 95px solid transparent;
@@ -53,7 +45,7 @@ body {
     height: 0;
     z-index: 10;
 }
-.front::before {
+.front::before{
     position: absolute;
     content: '';
     border-left: 300px solid #fda996;
@@ -61,8 +53,7 @@ body {
     left: -120px;
     top: -95px;
 }
-
-.card {
+.card{
     position: relative;
     width: 250px;
     height: 180px;
@@ -72,7 +63,7 @@ body {
     place-items: center;
     transition: 1s;
 }
-.card::before {
+.card::before{
     content: '';
     position: absolute;
     top: 10px;
@@ -82,17 +73,16 @@ body {
     border: 2px solid #003049;
     border-style: dashed;
 }
-.valentines:hover .card {
+.valentines:hover .card{
     transform: translateY(-100px);
 }
-.card .text {
+.card .text{
     font-family: 'Brush Script MT', cursive;
     font-size: 28px;
     text-align: center;
     line-height: 25px;
     color: #003049;
 }
-
 /* Flipbook centered at top */
 .flipbook {
     position: fixed;
