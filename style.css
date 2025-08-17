@@ -128,7 +128,7 @@ body{
     height: min(70vh, 520px);
 
     /* Force full override of desktop positioning */
-    top: 20vh !important;       /* moved slightly higher */                      
+    top: 50vh !important;                         
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
 
@@ -139,7 +139,7 @@ body{
   .container {
     width: 90%;
     height: auto;
-    top: 50px !important;  /* ensure this actually overrides */
+    top: 20px !important;  /* ensure this actually overrides */
   }
 }
 
