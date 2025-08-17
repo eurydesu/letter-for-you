@@ -128,7 +128,7 @@ body{
     height: min(70vh, 520px);
 
     /* Force full override of desktop positioning */
-    top: 50vh !important;                         
+    top: 40vh !important;       /* moved slightly higher */                      
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
 
