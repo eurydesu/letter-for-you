@@ -10,26 +10,24 @@
 </head>
 
 <body>
-<div class="music">
-    Music in Background If you Want!
-</div>
-<div class="love">
-    <audio controls autoplay muted loop>
-        <source src="love.mp3" type="audio/mpeg">
-    </audio>
 </div>
     <div class="container">
         <div class="valentines">
             <div class="envelope">
-                <div class="card">
+                <div class="card" onclick="openFlipbook()">
                     <div class="text">
-                        Click here <br> for the <br> message! 
+                        Click here <br> for the <br> message!
                     </div>
                 </div>
             </div>
             <div class="front"></div>
+            <div class="flipbook">
+                <div class="page page1">Page 1 content...</div>
+                <div class="page page2">Page 2 content...</div>
+                <div class="page page3">Page 3 content...</div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
