@@ -113,7 +113,7 @@ body{
   .flipbook {
     width: 90vw;          /* scale with screen width */
     max-width: 360px;
-    height: auto;         /* adjust height automatically */
+    height: min(70vh, 520px);
   }
 }
 .page {
