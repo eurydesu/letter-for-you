@@ -131,7 +131,7 @@ body{
   .container {
     width: 90%;
     height: 240px;
-    top: -50px !important;  /* push envelope up even more */
+    top: -40% !important;  /* push envelope up even more */
   }
 }
 
