@@ -1,28 +1,36 @@
-body{
+body {
     display: grid;
     place-items: center;
     min-height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
     background: #d0b2e5;
+    margin: 0;
+    padding: 0;
 }
-.container{
+
+.container {
     position: relative;
+    top: -40px; /* lifts envelope/card higher on desktop */
 }
-.valentines{
+
+.valentines {
     position: relative;
-    top: 50px;
+    top: 30px;
     cursor: pointer;
     animation: up 3s linear infinite;
 }
-.envelope{
+
+.envelope {
     position: relative;
     width: 300px;
     height: 200px;
     background: #f08080;
     display: grid;
     place-items: center;
+    margin: 0 auto;
 }
-.envelope::before{
+.envelope::before {
     content: '';
     position: absolute;
     width: 212px;
@@ -33,7 +41,8 @@ body{
     left: 44px;
     border-radius: 30px 0 0 0;
 }
-.front{
+
+.front {
     position: absolute;
     border-right: 180px solid #f4978e;
     border-top: 95px solid transparent;
@@ -44,7 +53,7 @@ body{
     height: 0;
     z-index: 10;
 }
-.front::before{
+.front::before {
     position: absolute;
     content: '';
     border-left: 300px solid #fda996;
@@ -52,7 +61,8 @@ body{
     left: -120px;
     top: -95px;
 }
-.card{
+
+.card {
     position: relative;
     width: 250px;
     height: 180px;
@@ -62,7 +72,7 @@ body{
     place-items: center;
     transition: 1s;
 }
-.card::before{
+.card::before {
     content: '';
     position: absolute;
     top: 10px;
@@ -72,28 +82,32 @@ body{
     border: 2px solid #003049;
     border-style: dashed;
 }
-.valentines:hover .card{
+.valentines:hover .card {
     transform: translateY(-100px);
 }
-.card .text{
+.card .text {
     font-family: 'Brush Script MT', cursive;
     font-size: 28px;
     text-align: center;
     line-height: 25px;
     color: #003049;
 }
+
+/* Flipbook centered at top */
 .flipbook {
-    position: fixed; /* so it's centered on the whole screen */
-    top: 50%;
+    position: fixed;
+    top: 20px;              /* stick near top of screen */
     left: 50%;
-    transform: translate(-50%, -50%);
-    width: 600px; /* make it bigger */
-    height: 400px;
+    transform: translateX(-50%);
+    width: 300px;           /* match envelope width */
+    height: 420px;          /* taller than envelope */
     perspective: 1500px;
     display: none;
     z-index: 20;
-    background: rgba(0,0,0,0.1); /* optional subtle background */
+    background: rgba(255,255,255,0.95);
+    border: 2px solid #ccc;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .page {
@@ -120,27 +134,22 @@ body{
 @media (max-width: 768px) {
   .flipbook {
     width: 90%;
-    height: auto;        /* Keeps proportion if you use fixed ratio images */
-    max-height: 500px;   /* Prevent it from getting too tall */
-    margin-top: 10px;    /* Bring flipbook closer to top */
+    max-width: 320px;
+    height: 450px;
+    top: 10px;              /* pull even closer to top */
   }
-
   .container {
     width: 90%;
     height: 240px;
-    margin-top: -70px;   /* Push envelope/card further up on mobile */
+    top: -60px;             /* push envelope up even more */
   }
 }
 
-@keyframes up{
-    0%, 100%{
-        transform: translateY(0);
-    }
-    50%{
-        transform: translateY(-30px);
-    }
+@keyframes up {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
 }
-.valentines::before{
+.valentines::before {
     content: '';
     position: absolute;
     width: 330px;
@@ -151,11 +160,7 @@ body{
     left: -15px;
     animation: scale 3s linear infinite;
 }
-@keyframes scale{
-    0%, 100%{
-        transform: scaleX(1);
-    }
-    50%{
-        transform: scaleX(.85);
-    }
+@keyframes scale {
+    0%, 100% { transform: scaleX(1); }
+    50% { transform: scaleX(.85); }
 }
