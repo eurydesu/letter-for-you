@@ -101,6 +101,7 @@ body{
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     position: relative;
+    transform-style: preserve-3d;
 }
 /* Mobile responsive layout */
 @media (max-width: 768px) {
@@ -114,6 +115,7 @@ body{
     width: 90vw;          /* scale with screen width */
     max-width: 360px;
     height: min(70vh, 520px);
+    transform-style: preserve-3d;
   }
 }
 .page {
@@ -131,10 +133,14 @@ body{
     transition: transform 1s;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     border-radius: 5px;
+    overflow: hidden;
 }
 .page1 { z-index: 3; }
 .page2 { z-index: 2; }
 .page3 { z-index: 1; }
+.page2, .page3 {
+    transform: rotateY(180deg);
+}
 @keyframes up {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-30px); }
