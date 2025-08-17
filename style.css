@@ -8,9 +8,18 @@ body{
 .container{
     position: relative;
 }
+.music{ 
+  font-family: 'Brush Script MT', cursive;
+    font-size: 28px;
+    text-align: center;
+    line-height: 25px;
+}
+.love{ 
+  height: 200px;
+}
 .valentines{
     position: relative;
-    top: 50px;
+    top: 1px;
     cursor: pointer;
     animation: up 3s linear infinite;
 }
