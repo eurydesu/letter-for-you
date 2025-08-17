@@ -123,15 +123,25 @@ body{
 /* Mobile adjustments */
 @media (max-width: 768px) {
   .flipbook {
-    width: 90%;
-    max-width: 320px;
-    height: 450px;
-    top: 100px;  /* move lower on mobile */
+    /* size */
+    width: 92%;
+    max-width: 360px;
+    height: min(70vh, 520px);
+
+    /* center horizontally + vertically */
+    top: 50vh;                         /* halfway down the viewport */
+    left: 50%;
+    transform: translate(-50%, -50%);  /* pull it up by half its own height */
+
+    /* keep it above everything */
+    position: fixed;
+    z-index: 20;
   }
+
   .container {
     width: 90%;
     height: auto;
-    top: 30px;   /* move envelope lower on mobile */
+    top: 20px;   /* slight nudge so the envelope sits nicely under the centered flipbook */
   }
 }
 
