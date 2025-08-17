@@ -126,7 +126,7 @@ body{
     width: 90%;
     max-width: 320px;
     height: 450px;
-    top: -100% !important;  /* force it higher than desktop version */
+    top: -75% !important;  /* force it higher than desktop version */
   }
   .container {
     width: 90%;
