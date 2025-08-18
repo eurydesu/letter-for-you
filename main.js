@@ -22,3 +22,10 @@ document.addEventListener('click', function(e) {
         }
     }
 });
+if (currentPage < pages.length - 1) {   // flip only until page 7
+    pages[currentPage].style.transform = 'rotateY(-180deg)';
+    currentPage++;
+} else {
+    // on last click, just close instead of flipping last page
+    flipbook.style.display = 'none';
+}
