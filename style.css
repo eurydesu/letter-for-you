@@ -114,7 +114,7 @@ body{
   .flipbook {
     width: 90vw;          /* scale with screen width */
     max-width: 360px;
-    height: min(70vh, 460px);
+    height: min(70vh, 420px);
     transform-style: preserve-3d;
   }
 }
